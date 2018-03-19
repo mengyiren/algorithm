@@ -2,21 +2,19 @@ package com.lintcode.algorithm;
 
 import org.junit.Test;
 
+
 /**
  * Created by IntelliJ IDEA.
  * User: mengyiren
  * Date: 2018/3/19
  */
 public class ReversedNumber {
-    int  reverseInteger(int number) {
-        int bai = number / 100;
-        int shi = number % 100 / 10;
-        int ge = number % 10;
-        return ge*100+shi*10+bai;
+    int reverseInteger(int number) {
+        return number % 10 * 100 + number % 100 / 10 * 10 + number / 100;
     }
 
     @Test
     public void test() {
-        System.out.println(reverseInteger(900));
+        System.out.println(reverseInteger(321));
     }
 }
