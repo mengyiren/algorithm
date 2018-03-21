@@ -19,36 +19,32 @@ public class KthLargestElement {
     public int kthLargestElement(int k, int[] nums) {
         //归并排序
         int[] tmp = new int[nums.length];
-        mergeSort(nums, tmp, 0, nums.length - 1);
+        mergeSort(nums,  nums.length );
         System.out.println(Arrays.toString(nums));
         return nums[nums.length-k];
     }
 
-    private void mergeSort(int[] sr, int[] tr, int first, int last) {
-        int mid = (first + last) >> 1;
-        if (first >= last) {
-            return;
-        }
-        mergeSort(sr, tr, first, mid);
-        mergeSort(sr, tr, mid + 1, last);
-        for (int i = 0; i < sr.length; i++) {
-            tr[i] = sr[i];
-        }
-        int left = first;
-        int right = mid + 1;
-        for (int current = first; current <= last; current++) {
-            if (left > mid) {
-                //左边用尽，取右边的元素
-                sr[current] = tr[right++];
-            } else if (right > last) {
-                //右边用尽取左边的元素
-                sr[current] = tr[left++];
-            } else if (tr[right] < tr[left]) {
-                //右半边的元素小于左半边，取右半边的元素
-                sr[current] = tr[right++];
-            } else {
-                //右半边的元素小于等于左半边，取左半边的元素
-                sr[current] = tr[left++];
+    private void mergeSort(int[] sr, int length) {
+        int[] tmp = new int[length];
+        int left_min,right_max=0,right_min,left_max,next;
+        for (int step =1;step<length;step*=2) {
+            for (left_min=0;left_min<length-1;left_min=right_max) {
+                right_min = left_max = left_min + step;
+                right_max = left_max + step;
+                if (right_max >= length) {
+                    right_max = length;
+                }
+                next = 0;
+                while (left_min < left_max && right_min < right_max) {
+                    tmp[next++] = sr[left_min] > sr[right_min] ? sr[right_min++] : sr[left_min++];
+                }
+                while (left_min < left_max && right_min<=length) {
+                    sr[--right_min] = sr[--left_max];
+                }
+
+                while (next > 0) {
+                    sr[--right_min] = tmp[--next];
+                }
             }
         }
     }
@@ -56,7 +52,7 @@ public class KthLargestElement {
 
     @Test
     public void test() {
-        System.out.println(kthLargestElement(3, new int[]{9, 3, 2, 4, 8}));
+        System.out.println(kthLargestElement(10, new int[]{1,2,3,4,5,6,8,9,10,7}));
     }
 
 }
