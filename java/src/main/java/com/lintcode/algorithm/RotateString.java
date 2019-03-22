@@ -3,6 +3,7 @@ package com.lintcode.algorithm;
 import org.junit.Test;
 
 /**
+ * 旋转字符
  * Created by IntelliJ IDEA.
  * User: mengyiren
  * Date: 2018/3/22

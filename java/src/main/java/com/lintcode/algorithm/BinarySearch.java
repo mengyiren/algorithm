@@ -2,12 +2,10 @@ package com.lintcode.algorithm;
 
 import org.junit.Test;
 
+/**
+ * 二分查找
+ */
 public class BinarySearch {
-    /**
-     * @param nums:   The integer array.
-     * @param target: Target to find.
-     * @return: The first position of target. Position starts from 0.
-     */
     public int binarySearch(int[] nums, int target) {
         int find = -1;
         int first = 0, last = nums.length - 1, mid = nums.length / 2;

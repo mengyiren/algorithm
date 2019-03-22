@@ -1,6 +1,7 @@
 package com.lintcode.algorithm;
 
 /**
+ * 丑数Ⅱ
  * Created by IntelliJ IDEA.
  * User: mengyiren
  * Date: 2018/3/20

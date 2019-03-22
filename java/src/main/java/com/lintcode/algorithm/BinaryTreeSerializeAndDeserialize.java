@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.util.*;
 
 /**
+ * 二叉树的序列化和反序列化
  * Created by IntelliJ IDEA.
  * User: mengyiren
  * Date: 2018/3/22

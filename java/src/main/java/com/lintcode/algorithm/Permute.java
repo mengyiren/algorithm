@@ -5,11 +5,10 @@ import org.junit.Test;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * 全排列
+ */
 public class Permute {
-    /*
-     * @param nums: A list of integers.
-     * @return: A list of permutations.
-     */
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new LinkedList<>();
         if (nums == null) {

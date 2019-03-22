@@ -1,6 +1,7 @@
 package com.lintcode.algorithm;
 
 /**
+ * 合并排序数组
  * Created by IntelliJ IDEA.
  * User: mengyiren
  * Date: 2018/3/21

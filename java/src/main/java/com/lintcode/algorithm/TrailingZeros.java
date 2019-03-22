@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.math.BigInteger;
 
 /**
+ * 设计一个算法，计算出n阶乘中尾部零的个数
  * Created by IntelliJ IDEA.
  * User: mengyiren
  * Date: 2018/3/19

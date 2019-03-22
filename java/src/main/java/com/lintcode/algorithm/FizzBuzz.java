@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * Fizz Buzz 问题
  * Created by IntelliJ IDEA.
  * User: mengyiren
  * Date: 2018/3/23

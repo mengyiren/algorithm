@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.TooManyListenersException;
 
 /**
+ * 在数组中找到第 k 大的元素
  * Created by IntelliJ IDEA.
  * User: mengyiren
  * Date: 2018/3/20
