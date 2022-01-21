@@ -45,18 +45,37 @@
 // Related Topics 哈希表 字符串 滑动窗口 👍 6790 👎 0
 
 package leetcode.editor.cn;
+
+import java.util.HashSet;
+
 //Java：无重复字符的最长子串
-public class P3LongestSubstringWithoutRepeatingCharacters{
+public class P3LongestSubstringWithoutRepeatingCharacters {
     public static void main(String[] args) {
         Solution solution = new P3LongestSubstringWithoutRepeatingCharacters().new Solution();
+        solution.lengthOfLongestSubstring("pwwkew");
         // TO TEST
     }
-    //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int lengthOfLongestSubstring(String s) {
 
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int lengthOfLongestSubstring(String s) {
+            HashSet<Character> occ = new HashSet<>();
+            int rk = 0;
+            int ans = 0;
+            int n = s.length();
+            for (int i = 0; i < n; i++) {
+                if (i != 0) {
+                    occ.remove(s.charAt(i - 1));
+                }
+                while (rk < n && !occ.contains(s.charAt(rk))) {
+                    occ.add(s.charAt(rk));
+                    rk++;
+                }
+                ans = Math.max(ans, rk - i);
+            }
+            return ans;
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }
