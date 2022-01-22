@@ -53,8 +53,10 @@
 
 package leetcode.editor.cn;
 
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.function.IntToDoubleFunction;
 
 //Java：LRU 缓存
 public class P146LruCache {
@@ -63,26 +65,92 @@ public class P146LruCache {
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
-    class LRUCache extends LinkedHashMap<Integer, Integer> {
+    class LRUCache {
+        class DLinkedNode {
+            int key;
+            int value;
+            DLinkedNode preview;
+            DLinkedNode next;
+
+            public DLinkedNode() {
+
+            }
+
+            public DLinkedNode(int key, int value) {
+                this.key = key;
+                this.value = value;
+            }
+        }
+
+        private int size;
+
         private int capacity;
 
+        private DLinkedNode head;
+
+        private DLinkedNode tail;
+
+        private HashMap<Integer, DLinkedNode> cache = new HashMap<>();
+
         public LRUCache(int capacity) {
-            super(capacity, 0.75F, true);
+            this.size = 0;
             this.capacity = capacity;
+            head = new DLinkedNode();
+            tail = new DLinkedNode();
+            head.next = tail;
+            tail.preview = head;
         }
 
         public int get(int key) {
-            return super.getOrDefault(key, -1);
+            DLinkedNode node = cache.get(key);
+            if (node == null) {
+                return -1;
+            }
+            moveToHead(node);
+            return node.value;
         }
 
         public void put(int key, int value) {
-            super.put(key, value);
+            DLinkedNode cacheNode = this.cache.get(key);
+            if (cacheNode == null) {
+                DLinkedNode node = new DLinkedNode(key, value);
+                cache.put(key, node);
+                addToHead(node);
+                size++;
+                if (size > capacity) {
+                    DLinkedNode tail = removeTail();
+                    cache.remove(tail.key);
+                    size--;
+                }
+            } else {
+                cacheNode.value = value;
+                moveToHead(cacheNode);
+            }
         }
 
-        @Override
-        protected boolean removeEldestEntry(Map.Entry<Integer, Integer> eldest) {
-            return size() > capacity;
+        private DLinkedNode removeTail() {
+            DLinkedNode res = tail.preview;
+            removeNode(res);
+            return res;
         }
+
+        private void moveToHead(DLinkedNode node) {
+            removeNode(node);
+            addToHead(node);
+        }
+
+        private void removeNode(DLinkedNode node) {
+            node.preview.next = node.next;
+            node.next.preview = node.preview;
+        }
+
+        private void addToHead(DLinkedNode node) {
+            node.preview = head;
+            node.next = head.next;
+            head.next.preview = node;
+            head.next = node;
+        }
+
     }
 
 /**
