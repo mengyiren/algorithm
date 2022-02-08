@@ -10,4 +10,5 @@ lintcode算法题
 6、P912SortAnArray 排序数组      
 7、P15ThreeSum 三数之和  
 8、MaximumSubarray 最大子数和    
-9、TwoSum 两数之和
+9、TwoSum 两数之和  
+10、MergeTwoSortedLists 合并两个有序链表
