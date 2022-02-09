@@ -12,4 +12,5 @@ lintcode算法题
 8、MaximumSubarray 最大子数和    
 9、TwoSum 两数之和  
 10、MergeTwoSortedLists 合并两个有序链表  
-11、LinkedListCycle 环型链表
+11、LinkedListCycle 环型链表  
+12、BinaryTreeLevelOrderTraversal 二叉树的层序遍历
