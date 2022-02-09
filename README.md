@@ -14,4 +14,5 @@ lintcode算法题
 10、MergeTwoSortedLists 合并两个有序链表  
 11、LinkedListCycle 环型链表  
 12、BinaryTreeLevelOrderTraversal 二叉树的层序遍历  
-13、BestTimeToBuyAndSellStock 买卖股票的最佳时机
+13、BestTimeToBuyAndSellStock 买卖股票的最佳时机  
+14、IntersectionOfTwoLinkedLists 相交链表
