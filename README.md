@@ -1,6 +1,6 @@
 # algorithm
 
-lintcode算法题
+leetcode算法题
 
 1、P206ReverseLinkedList 反转链表           
 2、P3LongestSubstringWithoutRepeatingCharacters 无重复最大子串  
@@ -16,4 +16,5 @@ lintcode算法题
 12、BinaryTreeLevelOrderTraversal 二叉树的层序遍历  
 13、BestTimeToBuyAndSellStock 买卖股票的最佳时机  
 14、IntersectionOfTwoLinkedLists 相交链表  
-15、MergeSortedArray 合并两个有序数组
+15、MergeSortedArray 合并两个有序数组  
+16、BinaryTreeZigzagLevelOrderTraversal 二叉树的锯齿形层序遍历
