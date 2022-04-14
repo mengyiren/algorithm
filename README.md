@@ -19,4 +19,6 @@ leetcode算法题
 15、MergeSortedArray 合并两个有序数组  
 16、BinaryTreeZigzagLevelOrderTraversal 二叉树的锯齿形层序遍历  
 17、LowestCommonAncestorOfABinaryTree 二叉树的最近公共祖先  
-18、ValidParentheses 有效的括号
+18、ValidParentheses 有效的括号  
+19、LongestPalindromicSubstring 最长回文子串  
+20、KthLargestElementInAnArray 数组中第K个大的元素
