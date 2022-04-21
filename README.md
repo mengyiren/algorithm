@@ -25,4 +25,5 @@ leetcode算法题
 21、ReverseNodesInKGroup k个一组翻转链表  
 22、SearchInRotatedSortedArray 搜索旋转排序数组  
 23、Permutations 全排列  
-24、AddStrings 字符串相加
+24、AddStrings 字符串相加  
+142、LinkedListCycleIi 环型链表起始位置
