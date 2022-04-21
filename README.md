@@ -23,4 +23,7 @@ leetcode算法题
 19、LongestPalindromicSubstring 最长回文子串  
 20、KthLargestElementInAnArray 数组中第K个大的元素  
 21、ReverseNodesInKGroup k个一组翻转链表  
-22、SearchInRotatedSortedArray 搜索旋转排序数组
+22、SearchInRotatedSortedArray 搜索旋转排序数组  
+23、Permutations 全排列  
+24、AddStrings 字符串相加  
+142、LinkedListCycleIi 环型链表起始位置
