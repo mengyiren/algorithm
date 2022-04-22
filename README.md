@@ -30,4 +30,5 @@ leetcode算法题
 26、SpiralMatrix 螺旋矩阵  
 27、LongestIncreasingSubsequence 最长递增子序列  
 28、BinarySearch 二分查找  
-29、ReorderList 重排链表
+29、ReorderList 重排链表  
+30、BinaryTreeInorderTraversal 二叉树的中序遍历
