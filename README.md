@@ -29,4 +29,5 @@ leetcode算法题
 25、LinkedListCycleIi 环型链表起始位置
 26、SpiralMatrix 螺旋矩阵  
 27、LongestIncreasingSubsequence 最长递增子序列  
-28、BinarySearch 二分查找
+28、BinarySearch 二分查找  
+29、ReorderList 重排链表
