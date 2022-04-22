@@ -31,4 +31,5 @@ leetcode算法题
 27、LongestIncreasingSubsequence 最长递增子序列  
 28、BinarySearch 二分查找  
 29、ReorderList 重排链表  
-30、BinaryTreeInorderTraversal 二叉树的中序遍历
+30、BinaryTreeInorderTraversal 二叉树的中序遍历  
+31、ImplementQueueUsingStacks 用栈实现队列
