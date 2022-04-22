@@ -27,4 +27,5 @@ leetcode算法题
 23、Permutations 全排列  
 24、AddStrings 字符串相加  
 25、LinkedListCycleIi 环型链表起始位置
-26、SpiralMatrix 螺旋矩阵
+26、SpiralMatrix 螺旋矩阵  
+27、LongestIncreasingSubsequence 最长递增子序列
