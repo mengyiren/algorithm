@@ -28,4 +28,5 @@ leetcode算法题
 24、AddStrings 字符串相加  
 25、LinkedListCycleIi 环型链表起始位置
 26、SpiralMatrix 螺旋矩阵  
-27、LongestIncreasingSubsequence 最长递增子序列
+27、LongestIncreasingSubsequence 最长递增子序列  
+28、BinarySearch 二分查找
