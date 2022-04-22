@@ -26,4 +26,10 @@ leetcode算法题
 22、SearchInRotatedSortedArray 搜索旋转排序数组  
 23、Permutations 全排列  
 24、AddStrings 字符串相加  
-142、LinkedListCycleIi 环型链表起始位置
+25、LinkedListCycleIi 环型链表起始位置
+26、SpiralMatrix 螺旋矩阵  
+27、LongestIncreasingSubsequence 最长递增子序列  
+28、BinarySearch 二分查找  
+29、ReorderList 重排链表  
+30、BinaryTreeInorderTraversal 二叉树的中序遍历  
+31、ImplementQueueUsingStacks 用栈实现队列
