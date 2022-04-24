@@ -37,4 +37,5 @@ leetcode算法题
 33、ClimbingStairs 爬楼梯  
 34、RemoveNthNodeFromEndOfList 删除链表的倒数第N个结点  
 35、MergeIntervals 合并区间  
-36、Sqrtx X的平方根
+36、Sqrtx X的平方根  
+37、RemoveDuplicatesFromSortedListIi 删除排序链表中的重复元素 II  
