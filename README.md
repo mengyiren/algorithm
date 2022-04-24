@@ -34,4 +34,5 @@ leetcode算法题
 30、BinaryTreeInorderTraversal 二叉树的中序遍历  
 31、ImplementQueueUsingStacks 用栈实现队列  
 32、BinaryTreeRightSideView 二叉树的右视图  
-33、ClimbingStairs 爬楼梯
+33、ClimbingStairs 爬楼梯  
+34、RemoveNthNodeFromEndOfList 删除链表的倒数第N个结点  
