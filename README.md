@@ -39,4 +39,5 @@ leetcode算法题
 35、MergeIntervals 合并区间  
 36、Sqrtx X的平方根  
 37、RemoveDuplicatesFromSortedListIi 删除排序链表中的重复元素 II  
-38、AddTwoNumbers 两数相加
+38、AddTwoNumbers 两数相加  
+39、StringToIntegerAtoi 字符串转换整数 (atoi)
