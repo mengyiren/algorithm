@@ -32,4 +32,13 @@ leetcode算法题
 28、BinarySearch 二分查找  
 29、ReorderList 重排链表  
 30、BinaryTreeInorderTraversal 二叉树的中序遍历  
-31、ImplementQueueUsingStacks 用栈实现队列
+31、ImplementQueueUsingStacks 用栈实现队列  
+32、BinaryTreeRightSideView 二叉树的右视图  
+33、ClimbingStairs 爬楼梯  
+34、RemoveNthNodeFromEndOfList 删除链表的倒数第N个结点  
+35、MergeIntervals 合并区间  
+36、Sqrtx X的平方根  
+37、RemoveDuplicatesFromSortedListIi 删除排序链表中的重复元素 II  
+38、AddTwoNumbers 两数相加  
+39、StringToIntegerAtoi 字符串转换整数 (atoi)  
+40、LianBiaoZhongDaoShuDiKgeJieDianLcof 链表中倒数第k个节点  
