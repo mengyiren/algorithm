@@ -42,3 +42,4 @@ leetcode算法题
 38、AddTwoNumbers 两数相加  
 39、StringToIntegerAtoi 字符串转换整数 (atoi)  
 40、LianBiaoZhongDaoShuDiKgeJieDianLcof 链表中倒数第k个节点  
+41、GenerateParentheses 括号生成  
