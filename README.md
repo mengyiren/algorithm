@@ -43,3 +43,4 @@ leetcode算法题
 39、StringToIntegerAtoi 字符串转换整数 (atoi)  
 40、LianBiaoZhongDaoShuDiKgeJieDianLcof 链表中倒数第k个节点  
 41、GenerateParentheses 括号生成  
+42、LongestCommonSubsequence 最长公共子序列  
