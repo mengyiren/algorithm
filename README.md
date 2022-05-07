@@ -44,4 +44,5 @@ leetcode算法题
 40、LianBiaoZhongDaoShuDiKgeJieDianLcof 链表中倒数第k个节点  
 41、GenerateParentheses 括号生成  
 42、LongestCommonSubsequence 最长公共子序列  
-43、BinaryTreePreorderTraversal 二叉树的前序遍历
+43、BinaryTreePreorderTraversal 二叉树的前序遍历  
+44、RestoreIpAddresses 复原 IP 地址
