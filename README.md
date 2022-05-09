@@ -46,4 +46,6 @@ leetcode算法题
 42、LongestCommonSubsequence 最长公共子序列  
 43、BinaryTreePreorderTraversal 二叉树的前序遍历  
 44、RestoreIpAddresses 复原 IP 地址  
-45、ConstructBinaryTreeFromPreorderAndInorderTraversal 从前序与中序遍历序列构造二叉树
+45、ConstructBinaryTreeFromPreorderAndInorderTraversal 从前序与中序遍历序列构造二叉树  
+46、ConstructBinaryTreeFromInorderAndPostorderTraversal 从中序与后序遍历序列构造二叉树  
+47、
