@@ -45,4 +45,5 @@ leetcode算法题
 41、GenerateParentheses 括号生成  
 42、LongestCommonSubsequence 最长公共子序列  
 43、BinaryTreePreorderTraversal 二叉树的前序遍历  
-44、RestoreIpAddresses 复原 IP 地址
+44、RestoreIpAddresses 复原 IP 地址  
+45、ConstructBinaryTreeFromPreorderAndInorderTraversal 从前序与中序遍历序列构造二叉树
