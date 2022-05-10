@@ -55,4 +55,6 @@ leetcode算法题
 51、PathSumIi 路径总和 II  
 52、DiameterOfBinaryTree 二叉树的直径  
 53、SymmetricTree 对称二叉树  
-54、ValidateBinarySearchTree 验证二叉搜索树
+54、ValidateBinarySearchTree 验证二叉搜索树  
+55、CoinChange 零钱兑换  
+56、MultiplyStrings 字符串相乘
