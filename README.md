@@ -49,4 +49,5 @@ leetcode算法题
 45、ConstructBinaryTreeFromPreorderAndInorderTraversal 从前序与中序遍历序列构造二叉树  
 46、ConstructBinaryTreeFromInorderAndPostorderTraversal 从中序与后序遍历序列构造二叉树  
 47、BalancedBinaryTree 平衡二叉树  
-48、SumRootToLeafNumbers 求根节点到叶节点数字之和
+48、SumRootToLeafNumbers 求根节点到叶节点数字之和  
+49、MaximumDepthOfBinaryTree 二叉树的最大深度
