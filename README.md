@@ -52,4 +52,5 @@ leetcode算法题
 48、SumRootToLeafNumbers 求根节点到叶节点数字之和  
 49、MaximumDepthOfBinaryTree 二叉树的最大深度  
 50、P155MinStack 最小栈  
-51、PathSumIi 路径总和 II
+51、PathSumIi 路径总和 II  
+52、DiameterOfBinaryTree 二叉树的直径  
