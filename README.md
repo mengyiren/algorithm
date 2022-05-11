@@ -57,4 +57,5 @@ leetcode算法题
 53、SymmetricTree 对称二叉树  
 54、ValidateBinarySearchTree 验证二叉搜索树  
 55、CoinChange 零钱兑换  
-56、MultiplyStrings 字符串相乘
+56、MultiplyStrings 字符串相乘  
+57、CompareVersionNumbers 比较版本号
