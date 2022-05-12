@@ -58,4 +58,6 @@ leetcode算法题
 54、ValidateBinarySearchTree 验证二叉搜索树  
 55、CoinChange 零钱兑换  
 56、MultiplyStrings 字符串相乘  
-57、CompareVersionNumbers 比较版本号
+57、CompareVersionNumbers 比较版本号  
+58、MinimumPathSum 最小路径和  
+59、YongLiangGeZhanShiXianDuiLieLcof 用两个栈实现队列  
