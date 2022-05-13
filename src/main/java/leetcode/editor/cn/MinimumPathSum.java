@@ -32,19 +32,38 @@
 // Related Topics 数组 动态规划 矩阵 👍 1245 👎 0
 
 package leetcode.editor.cn;
+
 //Java：最小路径和
-public class MinimumPathSum{
+public class MinimumPathSum {
     public static void main(String[] args) {
         Solution solution = new MinimumPathSum().new Solution();
+        int[][] grid = new int[][]{{1, 3, 4, 8}, {3, 2, 2, 4}, {5, 7, 1, 9}, {2, 3, 2, 3}};
+        solution.minPathSum(grid);
         // TO TEST
     }
-    
+
     //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int minPathSum(int[][] grid) {
-        return 0;
+    class Solution {
+        public int minPathSum(int[][] grid) {
+            int m = grid.length;
+            int n = grid[0].length;
+            int[][] dp = new int[m][n];
+            for (int i = m - 1; i >= 0; i--) {
+                for (int j = n - 1; j >= 0; j--) {
+                    if (i == m - 1 && j == n - 1) {
+                        dp[i][j] = grid[i][j];
+                    } else if (i + 1 == m) {
+                        dp[i][j] = grid[i][j] + dp[i][j + 1];
+                    } else if (j + 1 == n) {
+                        dp[i][j] = grid[i][j] + dp[i + 1][j];
+                    } else {
+                        dp[i][j] = Math.min(grid[i][j] + dp[i + 1][j], grid[i][j] + dp[i][j + 1]);
+                    }
+                }
+            }
+            return dp[0][0];
+        }
     }
-}
 //leetcode submit region end(Prohibit modification and deletion)
 
 }
