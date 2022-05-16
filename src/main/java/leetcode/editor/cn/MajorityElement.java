@@ -71,12 +71,13 @@ public class MajorityElement {
                 while (left < right && nums[right] <= tmp) {
                     right--;
                 }
-                swap(nums, left, right);
+                nums[left] = nums[right];
                 while (left < right && nums[left] >= tmp) {
                     left++;
                 }
-                swap(nums, left, right);
+                nums[right]=nums[left];
             }
+            nums[left] = tmp;
             return left;
         }
 
