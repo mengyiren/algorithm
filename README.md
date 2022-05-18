@@ -70,4 +70,5 @@ leetcode算法题
 67、MaximumLengthOfRepeatedSubarray 最长重复子数组
 68、InvertBinaryTree 翻转二叉树  
 69、FindFirstAndLastPositionOfElementInSortedArray 在排序数组中查找元素的第一个和最后一个位置  
-70、LongestCommonPrefix 最长公共前缀  
+70、LongestCommonPrefix 最长公共前缀   
+71、MaximalSquare 最大正方形
