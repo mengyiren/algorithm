@@ -68,4 +68,6 @@ leetcode算法题
 64、CombinationSum 组合总和  
 65、RotateImage 旋转图像  
 67、MaximumLengthOfRepeatedSubarray 最长重复子数组
-68、InvertBinaryTree 翻转二叉树
+68、InvertBinaryTree 翻转二叉树  
+69、FindFirstAndLastPositionOfElementInSortedArray 在排序数组中查找元素的第一个和最后一个位置  
+70、
