@@ -63,12 +63,13 @@ public class SwapNodesInPairs {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public ListNode swapPairs(ListNode head) {
-            if (head == null) {
-                return null;
+            if (head == null || head.next==null) {
+                return head;
             }
-            ListNode pre = new ListNode();
-            pre.next = head;
-            return pre.next;
+            ListNode node = head.next;
+            head.next = swapPairs(node.next);
+            node.next = head;
+            return node;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
