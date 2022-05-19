@@ -57,4 +57,30 @@ leetcode算法题
 53、SymmetricTree 对称二叉树  
 54、ValidateBinarySearchTree 验证二叉搜索树  
 55、CoinChange 零钱兑换  
-56、MultiplyStrings 字符串相乘
+56、MultiplyStrings 字符串相乘  
+57、CompareVersionNumbers 比较版本号  
+58、MinimumPathSum 最小路径和  
+59、YongLiangGeZhanShiXianDuiLieLcof 用两个栈实现队列  
+60、Subsets 子集  
+61、PalindromeLinkedList 回文链表  
+62、PathSum 路径总和  
+63、MajorityElement 多数元素   
+64、CombinationSum 组合总和  
+65、RotateImage 旋转图像  
+67、MaximumLengthOfRepeatedSubarray 最长重复子数组
+68、InvertBinaryTree 翻转二叉树  
+69、FindFirstAndLastPositionOfElementInSortedArray 在排序数组中查找元素的第一个和最后一个位置  
+70、LongestCommonPrefix 最长公共前缀   
+71、MaximalSquare 最大正方形  
+72、RemoveDuplicatesFromSortedList 删除排序链表中的重复元素  
+73、SearchA2dMatrixIi 搜索二维矩阵 II  
+74、FindPeakElement 寻找峰值  
+75、UniquePaths 不同路径  
+76、LongestConsecutiveSequence 最长连续序列  
+77、FindMinimumInRotatedSortedArray 寻找旋转排序数组中的最小值  
+78、MaxAreaOfIsland 岛屿的最大面积
+79、DecodeString 字符串解码  
+80、SwapNodesInPairs 两两交换链表中的节点  
+81、BestTimeToBuyAndSellStockIi 买卖股票的最佳时机 II  
+82、BasicCalculatorIi 基本计算器 II  
+83、MaximumWidthOfBinaryTree 二叉树最大宽度
