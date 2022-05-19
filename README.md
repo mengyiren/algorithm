@@ -77,4 +77,5 @@ leetcode算法题
 74、FindPeakElement 寻找峰值  
 75、UniquePaths 不同路径  
 76、LongestConsecutiveSequence 最长连续序列  
-77、FindMinimumInRotatedSortedArray 寻找旋转排序数组中的最小值
+77、FindMinimumInRotatedSortedArray 寻找旋转排序数组中的最小值  
+78、MaxAreaOfIsland 岛屿的最大面积
