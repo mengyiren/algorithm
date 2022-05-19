@@ -75,4 +75,5 @@ leetcode算法题
 72、RemoveDuplicatesFromSortedList 删除排序链表中的重复元素  
 73、SearchA2dMatrixIi 搜索二维矩阵 II  
 74、FindPeakElement 寻找峰值  
-75、UniquePaths 不同路径
+75、UniquePaths 不同路径  
+76、LongestConsecutiveSequence 最长连续序列
