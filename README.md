@@ -76,4 +76,5 @@ leetcode算法题
 73、SearchA2dMatrixIi 搜索二维矩阵 II  
 74、FindPeakElement 寻找峰值  
 75、UniquePaths 不同路径  
-76、LongestConsecutiveSequence 最长连续序列
+76、LongestConsecutiveSequence 最长连续序列  
+77、FindMinimumInRotatedSortedArray 寻找旋转排序数组中的最小值
