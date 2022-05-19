@@ -73,4 +73,5 @@ leetcode算法题
 70、LongestCommonPrefix 最长公共前缀   
 71、MaximalSquare 最大正方形  
 72、RemoveDuplicatesFromSortedList 删除排序链表中的重复元素  
-73、SearchA2dMatrixIi 搜索二维矩阵 II
+73、SearchA2dMatrixIi 搜索二维矩阵 II  
+74、FindPeakElement 寻找峰值
