@@ -84,4 +84,5 @@ leetcode算法题
 81、BestTimeToBuyAndSellStockIi 买卖股票的最佳时机 II  
 82、BasicCalculatorIi 基本计算器 II  
 83、MaximumWidthOfBinaryTree 二叉树最大宽度  
-84、SingleNumber 只出现一次的数字
+84、SingleNumber 只出现一次的数字  
+85、ValidateIpAddress 验证IP地址
