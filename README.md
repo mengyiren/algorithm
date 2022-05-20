@@ -87,4 +87,5 @@ leetcode算法题
 84、SingleNumber 只出现一次的数字  
 85、ValidateIpAddress 验证IP地址   
 86、LargestNumber 最大数  
-87、CopyListWithRandomPointer 复制带随机指针的链表
+87、CopyListWithRandomPointer 复制带随机指针的链表  
+88、MoveZeroes 移动零
