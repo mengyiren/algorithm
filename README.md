@@ -86,4 +86,5 @@ leetcode算法题
 83、MaximumWidthOfBinaryTree 二叉树最大宽度  
 84、SingleNumber 只出现一次的数字  
 85、ValidateIpAddress 验证IP地址   
-86、LargestNumber 最大数
+86、LargestNumber 最大数  
+87、CopyListWithRandomPointer 复制带随机指针的链表
