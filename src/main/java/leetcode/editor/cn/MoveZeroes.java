@@ -38,27 +38,34 @@ package leetcode.editor.cn;
 public class MoveZeroes {
     public static void main(String[] args) {
         Solution solution = new MoveZeroes().new Solution();
-        solution.moveZeroes(new int[]{0, 1, 0, 3, 12});
+        solution.moveZeroes(new int[]{1,0});
         // TO TEST
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public void moveZeroes(int[] nums) {
-            int count = 0;
-            for (int i = 0; i < nums.length; i++) {
-                if (nums[i] == 0) {
-                    count++;
-                } else {
-                    nums[i - count] = nums[i];
-                }
-                if (i == nums.length - 1) {
-                    while (count > 0) {
-                        nums[nums.length - count] = 0;
-                        count--;
+            int left = 0;
+            int right = 0;
+            while (right < nums.length) {
+                while (nums[right] == 0) {
+                    right++;
+                    if (right == nums.length) {
+                        return;
                     }
                 }
+                swap(nums, left, right);
+                left++;
+                if (left > right) {
+                    right++;
+                }
             }
+        }
+
+        private void swap(int[] nums, int left, int right) {
+            int tmp = nums[left];
+            nums[left] = nums[right];
+            nums[right] = tmp;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)

@@ -88,4 +88,5 @@ leetcode算法题
 85、ValidateIpAddress 验证IP地址   
 86、LargestNumber 最大数  
 87、CopyListWithRandomPointer 复制带随机指针的链表  
-88、MoveZeroes 移动零
+88、MoveZeroes 移动零  
+89、MinimumSizeSubarraySum 长度最小的子数组(怀疑测试用例错误)
