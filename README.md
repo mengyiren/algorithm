@@ -93,4 +93,5 @@ leetcode算法题
 90、ErChaSouSuoShuYuShuangXiangLianBiaoLcof 二叉搜索树与双向链表  
 91、DiagonalTraverse 对角线遍历  
 92、SortAnArray 堆排序&归并排序  
-93、ErChaSouSuoShuDeDiKdaJieDianLcof 二叉搜索树的第k大节点
+93、ErChaSouSuoShuDeDiKdaJieDianLcof 二叉搜索树的第k大节点  
+94、CheckCompletenessOfABinaryTree 二叉树的完全性检验
