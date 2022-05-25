@@ -91,4 +91,5 @@ leetcode算法题
 88、MoveZeroes 移动零  
 89、MinimumSizeSubarraySum 长度最小的子数组(怀疑测试用例错误)  
 90、ErChaSouSuoShuYuShuangXiangLianBiaoLcof 二叉搜索树与双向链表  
-91、DiagonalTraverse 对角线遍历
+91、DiagonalTraverse 对角线遍历  
+92、SortAnArray 堆排序&归并排序
