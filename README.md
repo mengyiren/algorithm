@@ -95,4 +95,5 @@ leetcode算法题
 92、SortAnArray 堆排序&归并排序  
 93、ErChaSouSuoShuDeDiKdaJieDianLcof 二叉搜索树的第k大节点  
 94、CheckCompletenessOfABinaryTree 二叉树的完全性检验  
-95、RemoveKDigits 移掉 K 位数字
+95、RemoveKDigits 移掉 K 位数字  
+96、MedianOfTwoSortedArrays 寻找两个正序数组的中位数
