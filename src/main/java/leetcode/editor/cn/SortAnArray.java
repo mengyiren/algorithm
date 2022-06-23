@@ -31,11 +31,13 @@
 
 package leetcode.editor.cn;
 
+import java.util.Random;
+
 //Java：排序数组
 public class SortAnArray {
     public static void main(String[] args) {
         Solution solution = new SortAnArray().new Solution();
-        int[] array = solution.sortArray(new int[]{2, 6, 4, 5, 8, 7});
+        int[] array = solution.sortArray(new int[]{5, 1, 1, 2, 0, 0});
         System.out.println(array);
         // TO TEST
     }
@@ -45,42 +47,11 @@ public class SortAnArray {
         int[] tmp;
 
         public int[] sortArray(int[] nums) {
-            //heapSort(nums);
             tmp = new int[nums.length];
+            //heapSort(nums);
             mergeSort(nums, 0, nums.length - 1);
+            //quickSort(nums, 0, nums.length - 1);
             return nums;
-        }
-
-        private void heapSort(int[] nums) {
-            int len = nums.length;
-            buildHeap(nums, len);
-            for (int i = len - 1; i >= 1; i--) {
-                swap(nums, i, 0);
-                maxHeapify(nums, 0, i);
-            }
-        }
-
-        private void buildHeap(int[] nums, int len) {
-            int index = (len - 1 - 1) / 2;
-            for (int i = index; i >= 0; i--) {
-                maxHeapify(nums, i, len);
-            }
-        }
-
-        private void maxHeapify(int[] nums, int i, int len) {
-            int large = i;
-            int left = (i << 1) + 1;
-            int right = (i << 1) + 2;
-            if (left < len && nums[left] > nums[large]) {
-                large = left;
-            }
-            if (right < len && nums[right] > nums[large]) {
-                large = right;
-            }
-            if (large != i) {
-                swap(nums, i, large);
-                maxHeapify(nums, large, len);
-            }
         }
 
         private void mergeSort(int[] nums, int left, int right) {
@@ -109,6 +80,69 @@ public class SortAnArray {
                 }
             }
         }
+
+        private void heapSort(int[] nums) {
+            int len = nums.length;
+            buildHeap(nums, len);
+            for (int i = len - 1; i >= 1; i--) {
+                swap(nums, 0, i);
+                maxHeapify(nums, 0, i);
+            }
+        }
+
+        private void buildHeap(int[] nums, int len) {
+            int index = (len - 1 - 1) / 2;
+            for (int i = index; i >= 0; i--) {
+                maxHeapify(nums, i, len);
+            }
+        }
+
+        private void maxHeapify(int[] nums, int i, int len) {
+            int large = i;
+            int left = (i << 1) + 1;
+            int right = (i << 1) + 2;
+            if (left < len && nums[left] > nums[large]) {
+                large = left;
+            }
+            if (right < len && nums[right] > nums[large]) {
+                large = right;
+            }
+            if (large != i) {
+                swap(nums, i, large);
+                maxHeapify(nums, large, len);
+            }
+        }
+
+        private void quickSort(int[] nums, int left, int right) {
+            if (left < right) {
+                int pos = randomPartition(nums, left, right);
+                quickSort(nums, left, pos - 1);
+                quickSort(nums, pos + 1, right);
+            }
+        }
+
+        private int randomPartition(int[] nums, int left, int right) {
+            int index = new Random().nextInt(right - left + 1) + left;
+            swap(nums, left, index);
+            return partition(nums, left, right);
+        }
+
+        private int partition(int[] nums, int left, int right) {
+            int tmp = nums[left];
+            while (left < right) {
+                while (left < right && nums[right] >= tmp) {
+                    right--;
+                }
+                nums[left] = nums[right];
+                while (left < right && nums[left] <= tmp) {
+                    left++;
+                }
+                nums[right] = nums[left];
+            }
+            nums[left] = tmp;
+            return left;
+        }
+
 
         private void swap(int[] nums, int a, int b) {
             int tmp = nums[a];
