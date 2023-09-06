@@ -32,7 +32,6 @@
 
 package leetcode.editor.cn;
 
-import com.sun.org.apache.regexp.internal.RE;
 
 //Java：x 的平方根
 public class Sqrtx {

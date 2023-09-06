@@ -36,12 +36,8 @@
 
 package leetcode.editor.cn;
 
-import com.sun.javafx.image.IntPixelGetter;
 
-import javax.sound.midi.Soundbank;
-import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Deque;
 import java.util.List;
 
 //Java：全排列
