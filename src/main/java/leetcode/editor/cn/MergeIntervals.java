@@ -46,22 +46,25 @@ public class MergeIntervals {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int[][] merge(int[][] intervals) {
-            Arrays.sort(intervals, new Comparator<int[]>() {
-                @Override
-                public int compare(int[] o1, int[] o2) {
-                    return o1[0] - o2[0];
-                }
-            });
+            if (intervals == null || intervals.length == 0) {
+                return new int[0][];
+            }
+            Arrays.sort(intervals, Comparator.comparingInt(a->a[0]));
             List<int[]> merged = new ArrayList<>();
-            for (int i = 0; i < intervals.length; i++) {
-                int left = intervals[i][0];
-                int right = intervals[i][1];
-                if (merged.size() == 0 || merged.get(merged.size() - 1)[1] < left) {
-                    merged.add(new int[]{left, right});
+            int[] currentInterval = intervals[0];
+            for (int i = 1; i < intervals.length; i++) {
+                int[] interval = intervals[i];
+                if (interval[0] <= currentInterval[1]) {
+                    //当前区间开头小于等于上个区间的结尾，合并
+                    currentInterval[1] = Math.max(currentInterval[1], interval[1]);
                 } else {
-                    merged.get(merged.size() - 1)[1] = Math.max(merged.get(merged.size() - 1)[1], right);
+                    //不需要合并，直接计入结果
+                    merged.add(currentInterval);
+                    currentInterval = interval;
                 }
             }
+            //将最后一个区间加入结果
+            merged.add(currentInterval);
             return merged.toArray(new int[merged.size()][]);
         }
     }
