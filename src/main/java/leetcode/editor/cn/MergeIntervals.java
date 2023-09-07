@@ -47,24 +47,23 @@ public class MergeIntervals {
     class Solution {
         public int[][] merge(int[][] intervals) {
             if (intervals == null || intervals.length == 0) {
-                return new int[0][];
+                return new int[1][];
             }
-            Arrays.sort(intervals, Comparator.comparingInt(a->a[0]));
+            Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));
             List<int[]> merged = new ArrayList<>();
-            int[] currentInterval = intervals[0];
-            for (int i = 1; i < intervals.length; i++) {
+            int[] current = intervals[0];
+            int len = intervals.length;
+            for (int i = 1; i < len; i++) {
                 int[] interval = intervals[i];
-                if (interval[0] <= currentInterval[1]) {
-                    //当前区间开头小于等于上个区间的结尾，合并
-                    currentInterval[1] = Math.max(currentInterval[1], interval[1]);
+                if (current[1] >= interval[0]) {
+                    //合并
+                    current[1] = Math.max(current[1], interval[1]);
                 } else {
-                    //不需要合并，直接计入结果
-                    merged.add(currentInterval);
-                    currentInterval = interval;
+                    merged.add(current);
+                    current = interval;
                 }
             }
-            //将最后一个区间加入结果
-            merged.add(currentInterval);
+            merged.add(current);
             return merged.toArray(new int[merged.size()][]);
         }
     }

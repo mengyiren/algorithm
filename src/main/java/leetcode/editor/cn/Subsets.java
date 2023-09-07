@@ -38,30 +38,32 @@ import java.util.List;
 public class Subsets {
     public static void main(String[] args) {
         Solution solution = new Subsets().new Solution();
-        solution.subsets(new int[]{1, 2, 3, 4});
+        solution.subsets(new int[]{1, 2, 3});
         // TO TEST
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
-        private List<Integer> t = new ArrayList<>();
-        private List<List<Integer>> ans = new ArrayList<>();
+        List<Integer> value = new ArrayList<>();
 
         public List<List<Integer>> subsets(int[] nums) {
-            dfs(nums, 0);
-            return ans;
+            List<List<Integer>> res = new ArrayList<>();
+            backTrack(nums, res, 0);
+            return res;
         }
 
-        private void dfs(int[] nums, int cur) {
-            if (cur == nums.length) {
-                ans.add(new ArrayList<>(t));
+        private void backTrack(int[] nums, List<List<Integer>> res, int index) {
+            if (index == nums.length) {
+                res.add(new ArrayList<>(value));
                 return;
             }
-            t.add(nums[cur]);
-            dfs(nums, cur + 1);
-            t.remove(t.size() - 1);
-            dfs(nums, cur + 1);
+            value.add(nums[index]);
+            backTrack(nums,res,index+1);
+            value.remove(value.size() - 1);
+            backTrack(nums,res,index+1);
         }
+
+
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
