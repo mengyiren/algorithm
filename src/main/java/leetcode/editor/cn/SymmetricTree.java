@@ -72,7 +72,10 @@ public class SymmetricTree {
             if (p == null || q == null) {
                 return false;
             }
-            return p.val == q.val && check(p.left, q.right) && check(p.right, q.left);
+            if (q.val != p.val) {
+                return false;
+            }
+            return check(p.left, q.right) && check(p.right, q.left);
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
