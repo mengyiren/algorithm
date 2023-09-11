@@ -72,17 +72,19 @@ public class BinaryTreeInorderTraversal {
     class Solution {
         public List<Integer> inorderTraversal(TreeNode root) {
             List<Integer> ans = new ArrayList<>();
-            dsf(root, ans);
+            dfs(root, ans);
             return ans;
         }
 
-        private void dsf(TreeNode node, List<Integer> ans) {
-            if (node != null) {
-                dsf(node.left, ans);
-                ans.add(node.val);
-                dsf(node.right, ans);
+        private void dfs(TreeNode root, List<Integer> ans) {
+            if (root == null) {
+                return;
             }
+            dfs(root.left, ans);
+            ans.add(root.val);
+            dfs(root.right, ans);
         }
+
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
