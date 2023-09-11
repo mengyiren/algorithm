@@ -33,18 +33,44 @@
 //
 // Related Topics 栈 数组 单调栈 👍 2547 👎 0
 
-  
-  package leetcode.editor.cn;
-  public class LargestRectangleInHistogram{
-      public static void main(String[] args) {
-           Solution solution = new LargestRectangleInHistogram().new Solution();
-      }
-      //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int largestRectangleArea(int[] heights) {
-        return 0;
+
+package leetcode.editor.cn;
+
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Deque;
+
+public class LargestRectangleInHistogram {
+    public static void main(String[] args) {
+        Solution solution = new LargestRectangleInHistogram().new Solution();
+        solution.largestRectangleArea(new int[]{2,1,5,6,2,3});
     }
-}
+
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int largestRectangleArea(int[] heights) {
+            int n = heights.length;
+            int[] left = new int[n];
+            int[] right = new int[n];
+            Arrays.fill(right,n);
+
+            Deque<Integer> monoStack = new ArrayDeque<>();
+            for (int i = 0; i < n; i++) {
+                while (!monoStack.isEmpty() && heights[monoStack.peek()] >= heights[i]) {
+                    right[monoStack.peek()] = i;
+                    monoStack.pop();
+                }
+                left[i] = (monoStack.isEmpty() ? -1 : monoStack.peek());
+                monoStack.push(i);
+            }
+
+            int ans = 0;
+            for (int i = 0; i < n; i++) {
+                ans = Math.max(ans, (right[i]-left[i]-1)*heights[i]);
+            }
+            return ans;
+        }
+    }
 //leetcode submit region end(Prohibit modification and deletion)
 
-  }
+}
