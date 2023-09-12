@@ -35,34 +35,24 @@
 
 package leetcode.editor.cn;
 
-import java.nio.file.Path;
-
 //Java：买卖股票的最佳时机
 public class BestTimeToBuyAndSellStock {
     public static void main(String[] args) {
         Solution solution = new BestTimeToBuyAndSellStock().new Solution();
-        solution.maxProfit(new int[]{7, 1, 5, 3, 6, 4});
+        solution.maxProfit(new int[]{2,4,1});
         // TO TEST
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int maxProfit(int[] prices) {
-            if (prices == null) {
-                return 0;
-            }
+            int min = prices[0];
             int res = 0;
-            int buy = prices[0];
-            int sell = prices[0];
-            for (int i = 1; i < prices.length; i++) {
-                if (prices[i] < buy) {
-                    buy = prices[i];
-                    sell = prices[i];
+            for (int i = 0; i < prices.length; i++) {
+                if (prices[i] < min) {
+                    min = prices[i];
                 }
-                if (prices[i] > sell) {
-                    sell = prices[i];
-                }
-                res = Math.max(sell - buy, res);
+                res = Math.max(res, prices[i] - min);
             }
             return res;
         }
