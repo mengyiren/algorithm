@@ -57,9 +57,6 @@
 
 package leetcode.editor.cn;
 
-import java.util.HashSet;
-import java.util.Set;
-
 //Java：环形链表 II
 public class LinkedListCycleIi {
     public static void main(String[] args) {
@@ -80,28 +77,24 @@ public class LinkedListCycleIi {
     //leetcode submit region begin(Prohibit modification and deletion)
     public class Solution {
         public ListNode detectCycle(ListNode head) {
-            if (head == null) {
-                return null;
-            }
-            ListNode slow = head;
             ListNode fast = head;
-            while (fast != null) {
-                slow = slow.next;
-                if (fast.next != null) {
-                    fast = fast.next.next;
-                } else {
+            ListNode slow = head;
+            while (true) {
+                if (fast == null || fast.next == null) {
                     return null;
                 }
+                fast = fast.next.next;
+                slow = slow.next;
                 if (slow == fast) {
-                    ListNode pre = head;
-                    while (pre != slow) {
-                        pre = pre.next;
-                        slow = slow.next;
-                    }
-                    return pre;
+                    break;
                 }
             }
-            return null;
+            fast = head;
+            while (slow != fast) {
+                slow = slow.next;
+                fast = fast.next;
+            }
+            return fast;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
