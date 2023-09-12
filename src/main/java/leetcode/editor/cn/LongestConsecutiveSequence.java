@@ -38,28 +38,29 @@ public class LongestConsecutiveSequence {
     public static void main(String[] args) {
         Solution solution = new LongestConsecutiveSequence().new Solution();
         // TO TEST
+        solution.longestConsecutive(new int[]{100, 4, 200, 1, 3, 2});
     }
 
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int longestConsecutive(int[] nums) {
             Set<Integer> set = new HashSet<>();
-            for (int i = 0; i < nums.length; i++) {
-                set.add(nums[i]);
+            for (int num : nums) {
+                set.add(num);
             }
-            int ans = 0;
+            int res = 0;
             for (int num : set) {
                 if (!set.contains(num - 1)) {
-                    int current = num;
-                    int max = 1;
-                    while (set.contains(current + 1)) {
-                        current++;
-                        max++;
+                    int currentNum = num;
+                    int currentStreak = 1;
+                    while (set.contains(currentNum + 1)) {
+                        currentNum++;
+                        currentStreak++;
                     }
-                    ans = Math.max(ans, max);
+                    res = Math.max(res, currentStreak);
                 }
             }
-            return ans;
+            return res;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
