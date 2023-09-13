@@ -33,8 +33,6 @@
 
 package leetcode.editor.cn;
 
-import java.util.Random;
-
 //Java：多数元素
 public class MajorityElement {
     public static void main(String[] args) {
@@ -47,45 +45,19 @@ public class MajorityElement {
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
         public int majorityElement(int[] nums) {
-            quickSort(nums, 0, nums.length - 1);
-            return nums[nums.length / 2];
-        }
-
-        private void quickSort(int[] nums, int left, int right) {
-            if (left < right) {
-                int pos = randomPartition(nums, left, right);
-                quickSort(nums, left, pos - 1);
-                quickSort(nums, pos + 1, right);
-            }
-        }
-
-        private int randomPartition(int[] nums, int left, int right) {
-            int index = new Random().nextInt(right - left + 1) + left;
-            swap(nums, index, left);
-            return partition(nums, left, right);
-        }
-
-        private int partition(int[] nums, int left, int right) {
-            int tmp = nums[left];
-            while (left < right) {
-                while (left < right && nums[right] <= tmp) {
-                    right--;
+            int count = 0;
+            int candidate = 0;
+            for (int num : nums) {
+                if (count == 0) {
+                    candidate = num;
                 }
-                nums[left] = nums[right];
-                while (left < right && nums[left] >= tmp) {
-                    left++;
-                }
-                nums[right]=nums[left];
+                count += (candidate == num) ? 1 : -1;
             }
-            nums[left] = tmp;
-            return left;
+            return candidate;
         }
 
-        private void swap(int[] nums, int index, int left) {
-            int tmp = nums[index];
-            nums[index] = nums[left];
-            nums[left] = tmp;
-        }
+
+
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
