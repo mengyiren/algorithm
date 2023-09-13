@@ -85,9 +85,6 @@
 
 package leetcode.editor.cn;
 
-import java.util.HashSet;
-import java.util.Set;
-
 //Java：相交链表
 public class IntersectionOfTwoLinkedLists {
     public static void main(String[] args) {
@@ -108,20 +105,16 @@ public class IntersectionOfTwoLinkedLists {
     //leetcode submit region begin(Prohibit modification and deletion)
     public class Solution {
         public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
-            Set<ListNode> set = new HashSet();
-            ListNode temp = headA;
-            while (temp != null) {
-                set.add(temp);
-                temp = temp.next;
+            if (headA == null || headB == null) {
+                return null;
             }
-            temp = headB;
-            while (temp != null) {
-                if (set.contains(temp)) {
-                    return temp;
-                }
-                temp = temp.next;
+            ListNode pa = headA;
+            ListNode pb = headB;
+            while (pa != pb) {
+                pa = pa == null ? headB : pa.next;
+                pb = pb == null ? headA : pb.next;
             }
-            return null;
+            return pa;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
