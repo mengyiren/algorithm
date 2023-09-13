@@ -73,10 +73,10 @@ public class NumberOfIslands {
         }
 
         private void dfs(char[][] grid, int row, int col) {
-            if (!inArea(grid, row, col) || grid[row][col] == '0') {
+            if (!inArea(grid, row, col) || grid[row][col] != '1') {
                 return;
             }
-            grid[row][col] = '0';
+            grid[row][col] = '2';
             dfs(grid, row + 1, col);
             dfs(grid, row - 1, col);
             dfs(grid, row, col + 1);
