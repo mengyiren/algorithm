@@ -71,13 +71,15 @@ public class PalindromeLinkedList {
                 if (!recycleNode(node.next)) {
                     return false;
                 }
-                if (node.val != frontNode.val) {
+                if (frontNode.val != node.val) {
                     return false;
                 }
                 frontNode = frontNode.next;
             }
             return true;
         }
+
+
     }
 //leetcode submit region end(Prohibit modification and deletion)
 
