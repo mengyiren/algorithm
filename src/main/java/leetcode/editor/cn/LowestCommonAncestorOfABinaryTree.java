@@ -69,19 +69,19 @@ public class LowestCommonAncestorOfABinaryTree {
             return ans;
         }
 
-        private boolean dfs(TreeNode root, TreeNode p, TreeNode q) {
-            if (root == null) {
+        private boolean dfs(TreeNode node, TreeNode p, TreeNode q) {
+            if (node == null) {
                 return false;
             }
-            boolean left = dfs(root.left, p, q);
-            boolean right = dfs(root.right, p, q);
-            boolean current = root.val == p.val || root.val == q.val;
-            if ((left && right) || (current && (left || right))) {
-                ans = root;
+            boolean left = dfs(node.left, p, q);
+            boolean right = dfs(node.right, p, q);
+            boolean curr = node.val == p.val || node.val == q.val;
+            if ((left && right) || (curr && (left || right))) {
+                ans = node;
             }
-            return current || left || right;
+            return curr || left || right;
         }
     }
 //leetcode submit region end(Prohibit modification and deletion)
-
 }
+
