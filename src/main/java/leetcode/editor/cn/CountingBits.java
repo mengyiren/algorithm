@@ -51,24 +51,26 @@
 //
 // Related Topics 位运算 动态规划 👍 1253 👎 0
 
-  
-  package leetcode.editor.cn;
-  public class CountingBits{
-      public static void main(String[] args) {
-           Solution solution = new CountingBits().new Solution();
-          solution.countBits(5);
-      }
-      //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int[] countBits(int n) {
-        int[] bits = new int[n + 1];
-        for (int i = 1; i <= n; i++) {
-            int index = i & (i - 1);
-            bits[i]=bits[index]+1;
-        }
-        return bits;
+
+package leetcode.editor.cn;
+
+public class CountingBits {
+    public static void main(String[] args) {
+        Solution solution = new CountingBits().new Solution();
+        solution.countBits(5);
     }
-}
+
+    //leetcode submit region begin(Prohibit modification and deletion)
+    class Solution {
+        public int[] countBits(int n) {
+            int[] bits = new int[n + 1];
+            for (int i = 1; i <= n; i++) {
+                int index = i & (i - 1);
+                bits[i] = bits[index] + 1;
+            }
+            return bits;
+        }
+    }
 //leetcode submit region end(Prohibit modification and deletion)
 
-  }
+}
